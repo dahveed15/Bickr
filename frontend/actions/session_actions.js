@@ -15,7 +15,7 @@ export const receiveErrors = errors => ({
   errors
 });
 
-//check for errors
+//create new user
 export const signup = user => dispatch => (
   APIUtil.signup(user).then(newUser => (
     dispatch(receiveCurrentUser(newUser))
