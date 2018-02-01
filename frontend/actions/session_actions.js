@@ -37,3 +37,8 @@ export const logout = () => dispatch => (
     dispatch(receiveCurrentUser(null))
   ))
 );
+
+export const clearErrors = () => dispatch => (
+  //set the errors to be cleared
+  dispatch(receiveErrors([]))
+);

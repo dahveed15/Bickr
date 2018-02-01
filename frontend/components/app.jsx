@@ -1,5 +1,6 @@
 import React from 'react';
 import SignUpFormContainer from './session_form/signup_container';
+import LoginFormContainer from './session_form/login_container';
 import { Route } from 'react-router-dom';
 import NavBarContainer from './nav_bar/nav_bar_container';
 
@@ -19,6 +20,7 @@ const App = () => (
   <div>
     <Route path='/' component={NavBarContainer} />
     <Route path="/signup" component={SignUpFormContainer} />
+    <Route path="/login" component={LoginFormContainer} />
   </div>
 );
 

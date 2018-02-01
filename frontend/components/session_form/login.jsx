@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SignUpForm extends React.Component {
+class LoginForm extends React.Component {
 
   constructor(props) {
     super(props);
@@ -10,7 +10,6 @@ class SignUpForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.renderErrors = this.renderErrors.bind(this);
   }
 
   //username, email, password
@@ -21,13 +20,6 @@ class SignUpForm extends React.Component {
     };
   }
 
-  // renderErrors() {
-  //   console.log(this.props.errors);
-  //   // return (
-  //   //   this.props.errors.map((error) => error))
-  //   // )
-  // }
-
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -36,13 +28,13 @@ class SignUpForm extends React.Component {
   //we want to have a callback function that will redirect us
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state).then(() => this.props.history.push('/'));
+    this.props.login(this.state).then(() => this.props.history.push('/'));
   }
 
   render() {
     return (
       <div className="session-form">
-        <h2>Sign Up!</h2>
+        <h2>Log In!</h2>
         <form onSubmit={this.handleSubmit}>
           <ul>
             {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
@@ -65,12 +57,13 @@ class SignUpForm extends React.Component {
               value={this.state.password}
               onChange={this.handleInput('password')} />
           </label>
-          <button onClick={this.handleSubmit}>Sign Up</button>
+          <button onClick={this.handleSubmit}>Log In</button>
         </form>
       </div>
     );
   }
 
+
 }
 
-export default SignUpForm;
+export default LoginForm;
