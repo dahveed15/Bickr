@@ -10,6 +10,7 @@ class SignUpForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.renderErrors = this.renderErrors.bind(this);
   }
 
   //username, email, password
@@ -19,6 +20,13 @@ class SignUpForm extends React.Component {
       this.setState({[type]: e.target.value});
     };
   }
+
+  // renderErrors() {
+  //   console.log(this.props.errors);
+  //   // return (
+  //   //   this.props.errors.map((error) => error))
+  //   // )
+  // }
 
   //if we successfully create a new user,
   //we want to have a callback function that will redirect us
@@ -32,6 +40,9 @@ class SignUpForm extends React.Component {
       <div className="session-form">
         <h2>Sign Up!</h2>
         <form onSubmit={this.handleSubmit}>
+          <ul>
+            {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
+          </ul>
           <label>Username:
             <input
               type="text"
