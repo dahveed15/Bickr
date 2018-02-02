@@ -47,7 +47,7 @@ class SignUpForm extends React.Component {
         <div className="inner-signup-div">
           <h2 className="signup-title">Sign Up!</h2>
           <form className="signup-form" onSubmit={this.handleSubmit}>
-            <ul>
+            <ul className="errors">
               {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
             </ul>
             <label>Username:

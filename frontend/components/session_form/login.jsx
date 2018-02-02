@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
         <div className="inner-login-div">
           <h2 className="login-title">Log In!</h2>
           <form className="login-form" onSubmit={this.handleSubmit}>
-            <ul>
+            <ul className="errors">
               {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
             </ul>
             <label>Username:

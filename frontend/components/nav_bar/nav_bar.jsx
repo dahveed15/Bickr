@@ -16,7 +16,7 @@ export default ({currentUser, logout, pathName }) => {
       );
     }
     return (
-      <div>
+      <div className="register-user">
         { pathName === "/signup" ? null : <Link to="/signup">Sign Up</Link>}
         { pathName === "/login" ? null : <Link to="/login">Log In</Link>}
       </div>
