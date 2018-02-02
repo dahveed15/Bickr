@@ -7,7 +7,7 @@ class Api::AlbumsController < ApplicationController
   end
 
   def show
-    @album = Album.find(params[:id])
+    @album = Album.find_by(id: params[:id])
   end
 
   def create
@@ -22,8 +22,17 @@ class Api::AlbumsController < ApplicationController
     end
   end
 
+  def update
+    @album = current_user.albums.find_by(id: params[:id])
+    if @album.update_attributes(album_params)
+      render :show
+    else
+      render json: @album.errors.full_messages, status: 422
+    end
+  end
+
   def destroy
-    @album = Album.find(params[:id])
+    @album = current_user.albums.find_by(id: params[:id])
     @album.destroy
 
     render :show
