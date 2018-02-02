@@ -43,32 +43,36 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Sign Up!</h2>
-        <form onSubmit={this.handleSubmit}>
-          <ul>
-            {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
-          </ul>
-          <label>Username:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.handleInput('username')} />
-          </label>
-          <label>Email:
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.handleInput('email')} />
-          </label>
-          <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.handleInput('password')} />
-          </label>
-          <button onClick={this.handleSubmit}>Sign Up</button>
-        </form>
+      <div className="outer-signup-div">
+        <div className="inner-signup-div">
+          <h2 className="signup-title">Sign Up!</h2>
+          <form className="signup-form" onSubmit={this.handleSubmit}>
+            <ul>
+              {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
+            </ul>
+            <label>Username:
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.handleInput('username')}
+                autoFocus
+                placeholder="Enter username" />
+            </label>
+            <label>Email:
+              <input
+                type="text"
+                value={this.state.email}
+                onChange={this.handleInput('email')} />
+            </label>
+            <label>Password:
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.handleInput('password')} />
+            </label>
+            <button className="signup-button" onClick={this.handleSubmit}>Sign Up</button>
+          </form>
+        </div>
       </div>
     );
   }

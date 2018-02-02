@@ -44,10 +44,10 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="outer-div">
-        <div className="inner-div">
-          <h2 className="signup-title">Log In!</h2>
-          <form className="signup-form" onSubmit={this.handleSubmit}>
+      <div className="outer-login-div">
+        <div className="inner-login-div">
+          <h2 className="login-title">Log In!</h2>
+          <form className="login-form" onSubmit={this.handleSubmit}>
             <ul>
               {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
             </ul>

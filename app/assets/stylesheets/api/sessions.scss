@@ -2,20 +2,87 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+//login css
+
 //it cascades down
 //so everything in the inner div gets affected by changes in the outer div
-.outer-div {
+.outer-login-div {
   display: flex;
   justify-content: center;
   width: 100%;
   // border: 2px solid green;
 }
 
-.inner-div {
+.inner-login-div {
   border: 1px solid lightgray;
   box-shadow: 10px 10px 10px darkgray;
   border-radius: 5px;
   margin: 90px;
+}
+
+.login-form {
+  // border: 2px solid blue;
+  width: 360px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+}
+
+.login-form label input {
+  width: 355px;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  margin-top: 40px;
+}
+
+.login-form button {
+  margin-bottom: 35px;
+  width: 100px;
+  height: 50px;
+  margin-left: 127px;
+  background-color: blue;
+  color: white;
+}
+
+
+.login-title {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+//signup css
+
+.outer-signup-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // border: 2px solid green;
+}
+
+.inner-signup-div {
+  border: 1px solid lightgray;
+  box-shadow: 10px 10px 10px darkgray;
+  border-radius: 5px;
+  margin: 90px;
+}
+
+.signup-title {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .signup-form {
@@ -27,6 +94,7 @@
   padding: 0px 10px;
 }
 
+
 .signup-form label input {
   width: 355px;
   height: 30px;
@@ -35,24 +103,11 @@
   margin-bottom: 20px;
 }
 
-.login-button {
-  margin-top: 50px;
-}
-
-.signup-form button {
-  margin-bottom: 35px;
+.signup-button {
+  margin-top: 30px;
   width: 100px;
   height: 50px;
-  margin-left: 120px;
+  margin-left: 127px;
   background-color: blue;
   color: white;
-}
-
-
-.signup-title {
-  display: flex;
-  justify-content: center;
-  font-size: 50px;
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
