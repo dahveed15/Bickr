@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SignUpForm extends React.Component {
 
@@ -28,6 +29,7 @@ class SignUpForm extends React.Component {
   //   // )
   // }
 
+  //stops errors from being saved and displayed in the login page
   componentWillUnmount() {
     this.props.clearErrors();
   }

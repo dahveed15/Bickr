@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     currentUser: state.session.currentUser,
-    pathName: Boolean(ownProps.location.pathname === "/")
+    pathName: ownProps.location.pathname
   };
 };
 

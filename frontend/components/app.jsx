@@ -1,10 +1,9 @@
 import React from 'react';
 import SignUpFormContainer from './session_form/signup_container';
 import LoginFormContainer from './session_form/login_container';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import NavBarContainer from './nav_bar/nav_bar_container';
-
-
+import { AuthRoute } from '../util/route_utils';
 
 //route allows us to add custom routes to send our components to
 //I want Bickr to be rendered on every web page, so I won't route it
@@ -18,9 +17,9 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 
 const App = () => (
   <div>
-    <Route path='/' component={NavBarContainer} />
-    <Route path="/signup" component={SignUpFormContainer} />
-    <Route path="/login" component={LoginFormContainer} />
+      <Route path='/' component={NavBarContainer} />
+      <AuthRoute path="/signup" component={SignUpFormContainer} />
+      <AuthRoute path="/login" component={LoginFormContainer} />
   </div>
 );
 
