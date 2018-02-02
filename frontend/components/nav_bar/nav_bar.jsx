@@ -25,7 +25,7 @@ export default ({currentUser, logout, pathName }) => {
 
   return (
     <header className="nav-bar">
-      <h1 className="logo">Bickr</h1>
+    <Link to="/"><h1 className="logo">Bickr</h1></Link>
       <div>
         {pathName && display()}
       </div>

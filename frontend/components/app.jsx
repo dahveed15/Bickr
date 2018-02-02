@@ -15,6 +15,8 @@ import { AuthRoute } from '../util/route_utils';
 //Greeting buttons (Sign In/Sign Up)
 // <Route exact path='/' component Home />
 
+//
+
 const App = () => (
   <div>
     <Route path='/' component={NavBarContainer} />

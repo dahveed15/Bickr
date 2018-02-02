@@ -5,11 +5,11 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  # has_many :albums,
-  # primary_key: :id,
-  # foreign_key: :user_id,
-  # class_name: :Album
-  #
+  has_many :albums,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Album
+  
   # has_many :photos,
   # primary_key: :id,
   # foreign_key: :user_id,

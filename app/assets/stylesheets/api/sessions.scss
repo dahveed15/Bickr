@@ -12,14 +12,28 @@
 
 .logo {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 42px;
   margin-left: 20px;
 }
 
+
 .register-user {
-  // display: flex;
-  // justify-content: space-between;
-  border: 2px solid green;
+  margin-top: 14px;
+}
+
+//use flexbox for a whole unit
+// go into the links to adjust specific stuff
+.register-user a {
+  padding-left: 20px;
+  // border: 2px solid green;
+}
+
+.signup-link {
+  
+}
+
+.login-link {
+
 }
 
 .errors {
