@@ -44,28 +44,32 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="session-form">
-        <h2>Log In!</h2>
-        <form onSubmit={this.handleSubmit}>
-          <ul>
-            {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
-          </ul>
-          <label>Username:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.handleInput('username')} />
-          </label>
-          <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.handleInput('password')} />
-          </label>
-          <button onClick={this.handleSubmit}>Log In</button>
+      <div className="outer-div">
+        <div className="inner-div">
+          <h2 className="signup-title">Log In!</h2>
+          <form className="signup-form" onSubmit={this.handleSubmit}>
+            <ul>
+              {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
+            </ul>
+            <label>Username:
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.handleInput('username')}
+                autoFocus
+                placeholder="Enter username" />
+            </label>
+            <label>Password:
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.handleInput('password')} />
+            </label>
+            <button className="login-button" onClick={this.handleSubmit}>Log In</button>
 
-          <button onClick={this.demoLogin}>Try it out!</button>
-        </form>
+            <button onClick={this.demoLogin}>Try it out!</button>
+          </form>
+        </div>
       </div>
     );
   }
