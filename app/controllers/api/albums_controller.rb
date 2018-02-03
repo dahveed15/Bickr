@@ -23,7 +23,7 @@ class Api::AlbumsController < ApplicationController
   end
 
   def update
-    @album = current_user.albums.find_by(id: params[:id])
+    @album = current_user.albums.find(params[:id])
     if @album.update_attributes(album_params)
       render :show
     else
