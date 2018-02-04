@@ -52,29 +52,32 @@ class SignUpForm extends React.Component {
             <ul className="errors">
               {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
             </ul>
-            <label>Username:
+
               <input
                 type="text"
                 value={this.state.username}
                 onChange={this.handleInput('username')}
                 autoFocus
-                placeholder="Enter username" />
-            </label>
-            <label>Email:
+                className='username-input'
+                placeholder="Username" />
+
               <input
                 type="text"
                 value={this.state.email}
-                onChange={this.handleInput('email')} />
-            </label>
-            <label>Password:
+                onChange={this.handleInput('email')}
+                className='email-input'
+                placeholder="Email" />
+
               <input
                 type="password"
                 value={this.state.password}
-                onChange={this.handleInput('password')} />
-            </label>
+                onChange={this.handleInput('password')}
+                className='password-input'
+                placeholder="Password" />
+
             <button className="signup-button" onClick={this.handleSubmit}>Sign Up</button>
 
-          <button className="demo-button" onClick={this.demoLogin}>Try it out!</button>
+            <button className="demo-button" onClick={this.demoLogin}>Try it out!</button>
           </form>
         </div>
       </div>

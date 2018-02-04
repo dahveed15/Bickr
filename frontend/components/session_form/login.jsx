@@ -51,20 +51,22 @@ class LoginForm extends React.Component {
             <ul className="errors">
               {this.props.errors.map((error, idx) => <li key={idx}>{error}</li> )}
             </ul>
-            <label>Username:
+
               <input
                 type="text"
                 value={this.state.username}
                 onChange={this.handleInput('username')}
                 autoFocus
-                placeholder="Enter username" />
-            </label>
-            <label>Password:
+                className='username-input'
+                placeholder="Username" />
+
               <input
                 type="password"
                 value={this.state.password}
-                onChange={this.handleInput('password')} />
-            </label>
+                onChange={this.handleInput('password')}
+                className='password-input'
+                placeholder="Password" />
+
             <button className="login-button" onClick={this.handleSubmit}>Log In</button>
 
             <button className="demo-button" onClick={this.demoLogin}>Try it out!</button>

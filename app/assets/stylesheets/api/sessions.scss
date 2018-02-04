@@ -66,6 +66,10 @@
   list-style: none;
 }
 
+.username-input, .email-input, .password-input {
+  font-weight: 700;
+}
+
 //login css
 
 //it cascades down
@@ -93,7 +97,7 @@
   padding: 0px 10px;
 }
 
-.login-form label input {
+.login-form input {
   width: 355px;
   height: 30px;
   margin-top: 10px;
@@ -162,7 +166,7 @@
 }
 
 
-.signup-form label input {
+.signup-form input {
   width: 355px;
   height: 30px;
   margin-top: 10px;

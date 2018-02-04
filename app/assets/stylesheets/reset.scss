@@ -20,6 +20,21 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 :focus {
   outline: 0;
 }
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  position: relative;
+}
+
+#container {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   line-height: 1;
   color: black;
