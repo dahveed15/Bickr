@@ -5,10 +5,12 @@ export const RECEIVE_ALBUM = "RECEIVE_ALBUM";
 export const REMOVE_ALBUM = "REMOVE_ALBUM";
 
 
-const receiveAllAlbums = albums => ({
-  type: RECEIVE_ALL_ALBUMS,
-  albums
-});
+const receiveAllAlbums = albums => {
+  return {
+    type: RECEIVE_ALL_ALBUMS,
+    albums
+  };
+};
 
 const receiveAlbum = album => ({
   type: RECEIVE_ALBUM,

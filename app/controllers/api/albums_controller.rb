@@ -3,7 +3,9 @@ class Api::AlbumsController < ApplicationController
   before_action :require_logged_in
 
   def index
-    @albums = Album.all
+    # @albums = Album.all
+    #give me the albums only pertaining to the current user
+    @albums = current_user.albums
   end
 
   def show

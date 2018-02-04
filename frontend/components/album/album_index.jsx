@@ -4,9 +4,7 @@ class AlbumIndex extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      name: ''
-    };
+    // this.state = this.props.albums;
   }
 
   //create album
@@ -15,6 +13,23 @@ class AlbumIndex extends React.Component {
 
   //show all albums
     //
+    componentDidMount() {
+      this.props.fetchAlbums();
+    }
+
+
+  render() {
+    console.log(this.props.albums);
+    return (
+      <div>
+        I AM THE ALBUM INDEX PAGE
+        <ul className="album-list">
+          {this.props.albums.map((album) =>
+            <li key={album.id}>{album.name}</li> )}
+        </ul>
+      </div>
+    );
+  }
 
 }
 
