@@ -6,19 +6,26 @@
   display: flex;
   justify-content: space-between;
   background: #212727;
+  opacity: 0.8;
   color: white;
   padding: 10px;
 }
 
+//Bickr Logo
 .logo {
   font-weight: 700;
   font-size: 42px;
   margin-left: 20px;
+  text-decoration: none;
+  font-family: 'Teko', sans-serif;
+  // border: 2px solid green;
+  color: white;
+  margin-top: 10px;
 }
 
-
+//log in sign up
 .register-user {
-  margin-top: 14px;
+  margin-top: 20px;
 }
 
 //use flexbox for a whole unit
@@ -28,13 +35,30 @@
   // border: 2px solid green;
 }
 
-.signup-link {
-  
-}
-
 .login-link {
-
+  text-decoration: none;
+  color: white;
+  font-family: 'Teko', sans-serif;
+  font-size: 20px;
 }
+
+.signup-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  height: 20px;
+  width: 80px;
+  background: white;
+  margin: 0 20px;
+  padding: 5px 20px;
+  font-family: 'Teko', sans-serif;
+  border-radius: 4px;
+}
+
+.signup-link:hover {
+  color: gray;
+}
+
 
 .errors {
   color: red;
@@ -79,6 +103,10 @@
 
 .login-button {
   margin-top: 40px;
+}
+
+.login-button:hover {
+  cursor: pointer;
 }
 
 .login-form button {
@@ -143,10 +171,21 @@
 }
 
 .signup-button {
-  margin-top: 30px;
+  margin-top: 40px;
+}
+.signup-form button {
+  margin-bottom: 35px;
   width: 100px;
   height: 50px;
   margin-left: 127px;
   background-color: blue;
   color: white;
+}
+
+.signup-button:hover {
+  cursor: pointer;
+}
+
+.demo-button:hover {
+  cursor: pointer;
 }

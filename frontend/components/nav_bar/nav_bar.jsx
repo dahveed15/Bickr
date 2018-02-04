@@ -17,15 +17,15 @@ export default ({currentUser, logout, pathName }) => {
     }
     return (
       <div className="register-user">
-        { pathName === "/signup" ? null : <Link to="/signup">Sign Up</Link>}
-        { pathName === "/login" ? null : <Link to="/login">Log In</Link>}
+        { pathName === "/login" ? null : <Link to="/login" className="login-link">Log In</Link>}
+        { pathName === "/signup" ? null : <Link to="/signup" className="signup-link">Sign Up</Link>}
       </div>
     );
   };
 
   return (
     <header className="nav-bar">
-    <Link to="/"><h1 className="logo">Bickr</h1></Link>
+    <Link to="/" className="logo">bickr</Link>
       <div>
         {pathName && display()}
       </div>
