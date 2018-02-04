@@ -12,7 +12,7 @@ export default () => {
       <span>Guidelines</span>
       <span>Privacy</span>
       <span>Terms</span>
-      <span>Helspan forum</span>
+      <span>Help forum</span>
       <span>English</span>
     </div>
   );

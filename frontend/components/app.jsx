@@ -3,7 +3,7 @@ import SignUpFormContainer from './session_form/signup_container';
 import LoginFormContainer from './session_form/login_container';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import NavBarContainer from './nav_bar/nav_bar_container';
-import { AuthRoute } from '../util/route_utils';
+import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import HomePic from './home/home';
 import Footer from './footer/footer';
 
