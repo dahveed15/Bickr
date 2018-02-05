@@ -22,6 +22,7 @@ class AlbumShow extends React.Component {
     return (
       <div>
         <p>{album.name}</p>
+        <Link to={`/albums/${album.id}/edit`}>Update Album</Link>
         <Link to="/albums">Back to Albums</Link>
       </div>
     );

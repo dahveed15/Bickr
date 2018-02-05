@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class AlbumForm extends React.Component {
 
@@ -47,6 +48,7 @@ class AlbumForm extends React.Component {
           </label>
 
           <input type="submit" value={text} />
+          <Link to="/albums">Back to Albums</Link>
         </form>
       </div>
     );

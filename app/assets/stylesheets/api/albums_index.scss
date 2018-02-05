@@ -1,0 +1,65 @@
+// Place all the styles related to the Api/Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.album-list-title {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.album-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // border: 2px solid green;
+}
+
+//albums to go to the album show page
+.album-list a {
+  text-decoration: none;
+  border: 2px solid gray;
+  padding: 0 5px;
+  color: black;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.album-number {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #0033cc;
+}
+
+.album-delete-button {
+  margin-top: 25px;
+}
+
+.album-delete-button button {
+  background: gray;
+  //text color
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.create-new-album-link {
+  margin-top: 50px;
+}
+
+//a refers to Link that was imported from react-router-dom
+.create-new-album-link a {
+  text-decoration: none;
+  // border: 2px solid green;
+  background: gray;
+  padding: 7px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}

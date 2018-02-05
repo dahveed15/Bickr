@@ -5,36 +5,30 @@ class AlbumIndex extends React.Component {
 
   constructor(props) {
     super(props);
-    // this.state = this.props.albums;
   }
 
-  //create album
-    //saves the album name, stores the info in the database,
-    //and links them to the show page with that album name
-
-  //show all albums
-    //
     componentDidMount() {
       this.props.fetchAlbums();
     }
 
-    // <li>{album.name}</li>
 
   render() {
-    //I currently have that annoying key warning
-    //ask TA how to fix with two things
-    //I want the album number and the title
-    //show, index, and delete functionality complete
     return (
       <div>
+        <h1 className="album-list-title">My Albums</h1>
         <ul className="album-list">
           {this.props.albums.map((album, idx) =>
             <div key={idx}>
-              <li>Album {idx + 1}</li>
+              <li className="album-number">Album {idx + 1}</li>
               <Link to={`albums/${album.id}`}>{album.name}</Link>
-              <button onClick={() => this.props.deleteAlbum(album.id)}>Delete Album</button>
+              <div className="album-delete-button">
+                <button onClick={() => this.props.deleteAlbum(album.id)}>Delete Album</button>
+              </div>
             </div>)}
         </ul>
+        <div className="create-new-album-link">
+          <Link to="/albums/new">Create a New Album</Link>
+        </div>
       </div>
     );
   }
