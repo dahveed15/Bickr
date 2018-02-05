@@ -19,13 +19,17 @@ class AlbumIndex extends React.Component {
 
 
   render() {
-    console.log(this.props.albums);
+    //I currently have that annoying key warning
+    //ask TA how to fix with two things
+    //I want the album number and the title
     return (
       <div>
-        I AM THE ALBUM INDEX PAGE
         <ul className="album-list">
-          {this.props.albums.map((album) =>
-            <li key={album.id}>{album.name}</li> )}
+          {this.props.albums.map((album, idx) =>
+            <div>
+              <li>Album {idx + 1}</li>
+              <li>{album.name}</li>
+            </div>)}
         </ul>
       </div>
     );

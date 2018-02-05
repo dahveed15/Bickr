@@ -7,6 +7,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import HomePic from './home/home';
 import Footer from './footer/footer';
 import AlbumIndexContainer from './album/album_index_container';
+import AlbumShowContainer from './album/album_show_container';
 
 //route allows us to add custom routes to send our components to
 //I want Bickr to be rendered on every web page, so I won't route it
@@ -28,6 +29,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/" component={HomePic} />
       <ProtectedRoute exact path="/albums" component={AlbumIndexContainer} />
+      <ProtectedRoute exact path="/albums/:albumId" component={AlbumShowContainer} />
       <Redirect to='/' />
     </Switch>
     <Route path='/' component={Footer} />

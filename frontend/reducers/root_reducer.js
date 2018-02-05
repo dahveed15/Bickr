@@ -7,7 +7,7 @@ import AlbumsReducer from './album_reducer';
 const rootReducer = combineReducers({
   errors: errorsReducer,
   session: sessionReducer,
-  album: AlbumsReducer
+  albums: AlbumsReducer
 });
 
 export default rootReducer;
