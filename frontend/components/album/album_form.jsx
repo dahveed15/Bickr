@@ -33,23 +33,29 @@ class AlbumForm extends React.Component {
   }
 
   render() {
-    const text = this.props.formType === 'new' ? 'Create Album' : 'Update Album';
+    const text = this.props.formType === 'new' ? 'Create Album!' : 'Update Album!';
 
     return (
-      <div>
-        <h3>{text}</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label> Album Name
-            <input
-              type='text'
-              value={this.state.name}
-              onChange={this.update('name')}
-              />
-          </label>
+      <div className='outer-album-form-div'>
+        <div className="inner-album-form-div">
+          <div className="album-form-title">
+            <h3>{text}</h3>
+          </div>
+          <form className="album-form" onSubmit={this.handleSubmit}>
+            <label> Album Name:
+              <input
+                type='text'
+                value={this.state.name}
+                onChange={this.update('name')}
+                />
+            </label>
 
-          <input type="submit" value={text} />
-          <Link to="/albums">Back to Albums</Link>
-        </form>
+            <div className="album-buttons">
+              <input type="submit" value={text} />
+              <Link to="/albums">Back to Albums</Link>
+            </div>
+          </form>
+        </div>
       </div>
     );
 
