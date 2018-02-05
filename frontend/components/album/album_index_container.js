@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AlbumIndex from './album_index';
-import { fetchAlbums } from '../../actions/album_actions';
+import { fetchAlbums, deleteAlbum } from '../../actions/album_actions';
 
 const mapStateToProps = (state) => {
   //give me an array of the current user's albums
@@ -11,7 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchAlbums: () => dispatch(fetchAlbums())
+    fetchAlbums: () => dispatch(fetchAlbums()),
+    deleteAlbum: (id) => dispatch(deleteAlbum(id))
   };
 };
 
