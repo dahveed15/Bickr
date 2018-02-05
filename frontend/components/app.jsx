@@ -8,6 +8,7 @@ import HomePic from './home/home';
 import Footer from './footer/footer';
 import AlbumIndexContainer from './album/album_index_container';
 import AlbumShowContainer from './album/album_show_container';
+import AlbumFormContainer from './album/album_form_container';
 
 //route allows us to add custom routes to send our components to
 //I want Bickr to be rendered on every web page, so I won't route it
@@ -19,21 +20,25 @@ import AlbumShowContainer from './album/album_show_container';
 //Greeting buttons (Sign In/Sign Up)
 // <Route exact path='/' component Home />
 
-//
 
-const App = () => (
-  <div id="container">
-    <Route path='/' component={NavBarContainer} />
-    <Switch>
-      <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/" component={HomePic} />
-      <ProtectedRoute exact path="/albums" component={AlbumIndexContainer} />
-      <ProtectedRoute exact path="/albums/:albumId" component={AlbumShowContainer} />
-      <Redirect to='/' />
-    </Switch>
-    <Route path='/' component={Footer} />
-  </div>
-);
+
+const App = () => {
+  return (
+    <div id="container">
+      <Route path='/' component={NavBarContainer} />
+      <Switch>
+        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/" component={HomePic} />
+        <ProtectedRoute exact path="/albums" component={AlbumIndexContainer} />
+        <ProtectedRoute exact path="/albums/new" component={AlbumFormContainer} />
+        <ProtectedRoute exact path="/albums/:albumId" component={AlbumShowContainer} />
+        <ProtectedRoute exact path="/albums/:albumId/edit" component={AlbumFormContainer} />
+        <Redirect to='/' />
+      </Switch>
+      <Route path='/' component={Footer} />
+    </div>
+  );
+};
 
 export default App;

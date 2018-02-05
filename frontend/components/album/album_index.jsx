@@ -29,7 +29,7 @@ class AlbumIndex extends React.Component {
       <div>
         <ul className="album-list">
           {this.props.albums.map((album, idx) =>
-            <div>
+            <div key={idx}>
               <li>Album {idx + 1}</li>
               <Link to={`albums/${album.id}`}>{album.name}</Link>
               <button onClick={() => this.props.deleteAlbum(album.id)}>Delete Album</button>

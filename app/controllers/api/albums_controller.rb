@@ -2,6 +2,7 @@ class Api::AlbumsController < ApplicationController
 
   before_action :require_logged_in
 
+
   def index
     # @albums = Album.all
     #give me the albums only pertaining to the current user
@@ -9,6 +10,7 @@ class Api::AlbumsController < ApplicationController
   end
 
   def show
+
     @album = Album.find_by(id: params[:id])
   end
 

@@ -11,10 +11,17 @@ class AlbumShow extends React.Component {
     this.props.fetchAlbum(this.props.match.params.albumId);
   }
 
+
   render() {
+    const album = this.props.album;
+    //the case if previous state is undefined
+    if (!album) {
+      return <div>Loading...</div>;
+    }
+
     return (
       <div>
-        <p>{this.props.album.name}</p>
+        <p>{album.name}</p>
         <Link to="/albums">Back to Albums</Link>
       </div>
     );
