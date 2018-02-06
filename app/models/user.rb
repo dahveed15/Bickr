@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  username        :string
+#  email           :string
+#  img_url         :string
+#  session_token   :string
+#  password_digest :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
   validates :username, :email, uniqueness: true
@@ -9,11 +23,11 @@ class User < ApplicationRecord
   primary_key: :id,
   foreign_key: :user_id,
   class_name: :Album
-  
-  # has_many :photos,
-  # primary_key: :id,
-  # foreign_key: :user_id,
-  # class_name: :Photo
+
+  has_many :photos,
+  primary_key: :id,
+  foreign_key: :photo_id,
+  class_name: :Photo
 
   attr_reader :password
 

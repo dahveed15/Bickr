@@ -78,7 +78,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  
 }
 
 .inner-login-div {
@@ -89,7 +88,7 @@
 }
 
 .login-form {
-  
+
   width: 360px;
   height: 450px;
   display: flex;
@@ -118,8 +117,9 @@
   width: 100px;
   height: 50px;
   margin-left: 127px;
-  background-color: blue;
+  background-color: gray;
   color: white;
+  border-radius: 5px;
 }
 
 
@@ -182,8 +182,9 @@
   width: 100px;
   height: 50px;
   margin-left: 127px;
-  background-color: blue;
+  background-color: gray;
   color: white;
+  border-radius: 5px;
 }
 
 .signup-button:hover {
