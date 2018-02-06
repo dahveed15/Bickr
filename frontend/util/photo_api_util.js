@@ -1,7 +1,8 @@
 export const fetchPhotos = (albumId) => {
   return $.ajax({
     method: 'GET',
-    url: `api/albums/${albumId}/photos`
+    url: `api/albums/${albumId}/photos`,
+    data: {id: albumId}
   });
 };
 

@@ -26,8 +26,12 @@ class User < ApplicationRecord
 
   has_many :photos,
   primary_key: :id,
-  foreign_key: :photo_id,
+  foreign_key: :user_id,
   class_name: :Photo
+
+  has_many :album_photos,
+  through: :albums,
+  source: :photos
 
   attr_reader :password
 

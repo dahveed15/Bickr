@@ -3,26 +3,22 @@ class Api::PhotosController < ApplicationController
   before_action :require_logged_in
 
   def index
-    @photos = current_user.photos
+    #only give me the photos of one album belonging to a user
+    @photos = current_user.album_photos.where({album_id: params[:album_id]})
   end
 
   def show
-    @photo = Photo.find_by(id: params[:id])
+    #only be able to see an album photo by a current user
+    @photo = current_user.album_photos.find_by(id: params[:id])
   end
 
   def create
     @photo = Photo.new(photo_params)
 
-    #ryan says I can just put album_id and user_id in photo_params
-    #I can somehow get these from the front end
-    #apparently I won't have to then add lines 20 and 21 (a bit confused)
-
     @photo.user_id = current_user.id
-    @photo.album_id = params[:album_id]
 
-    # if Album.where(user_id: current_user.id).empty?
-    #   render json: 'status 422', status: 422
-    # end
+    #fixes multiple users being able to have the same album id
+    @photo.album_id = params[:album_id] if current_user.albums.find_by(id: params[:album_id])
 
     if @photo.save
       render :show
@@ -32,7 +28,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def update
-    @photo = current_user.photos.find(params[:id])
+    @photo = current_user.album_photos.find(params[:id])
     if @photo.update_attributes(photo_params)
       render :show
     else
@@ -41,7 +37,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def destroy
-    @photo = current_user.photos.find_by(id: params[:id])
+    @photo = current_user.album_photos.find_by(id: params[:id])
     @photo.destroy
 
     render :show
