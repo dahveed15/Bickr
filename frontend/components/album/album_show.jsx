@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class AlbumShow extends React.Component {
 
@@ -16,7 +16,9 @@ class AlbumShow extends React.Component {
     const album = this.props.album;
     //the case if previous state is undefined
     if (!album) {
-      return <div>Loading...</div>;
+      return (
+        <div>Loading...</div>
+      );
     }
 
     return (
