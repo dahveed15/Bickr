@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { createAlbum } from './actions/album_actions';
+import { createPhoto, updatePhoto, fetchPhotos, deletePhoto } from './actions/photo_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.store = store;
-  window.createAlbum = createAlbum;
+  window.createPhoto = createPhoto;
+  window.updatePhoto = updatePhoto;
+  window.fetchPhotos = fetchPhotos;
 
   ReactDOM.render(<Root store={store} />, root);
 });

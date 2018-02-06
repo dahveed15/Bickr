@@ -14,7 +14,6 @@ class Api::PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-
     @photo.user_id = current_user.id
 
     #fixes multiple users being able to have the same album id
@@ -28,7 +27,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def update
-    @photo = current_user.album_photos.find(params[:id])
+    @photo = current_user.album_photos.find_by(id: params[:id])
     if @photo.update_attributes(photo_params)
       render :show
     else
