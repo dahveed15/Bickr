@@ -22,12 +22,13 @@ class PhotoIndex extends React.Component {
           {this.props.photos.map((photo, idx) =>
             <div key={idx}>
               <li className="photo-number">Photo {idx + 1}</li>
-              <Link to={`photos/${photo.id}`}><img src={photo.img_url} /></Link>
+              <Link to={`/photos/${photo.id}`}><img src={photo.img_url} /></Link>
               <div className="photo-delete-button">
                 <button onClick={() => this.props.deletePhoto(photo.id)}>Delete Photo</button>
               </div>
             </div>)}
         </ul>
+
       </div>
     );
   }
