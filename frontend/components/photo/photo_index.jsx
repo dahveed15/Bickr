@@ -8,7 +8,6 @@ class PhotoIndex extends React.Component {
   }
 
     componentDidMount() {
-      console.log(this.props.albumId);
       this.props.fetchPhotos(this.props.albumId);
     }
 

@@ -3,10 +3,17 @@
   <head>
     <title>BickrApp</title>
     <%= csrf_meta_tags %>
+    <script type="text/javascript">
+    window.CLOUDINARY_OPTIONS = {
+      cloud_name: '<%= ENV["CLOUD_NAME"] %>',
+      upload_preset: '<%= ENV["UPLOAD_PRESET"] %>'
+    };
+    </script>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Teko:600" rel="stylesheet">
+
 
     <script type="text/javascript">
     <% if logged_in? %>
@@ -16,6 +23,7 @@
     ).html_safe %>
   <% end %>
   </script>
+
 
   </head>
 
