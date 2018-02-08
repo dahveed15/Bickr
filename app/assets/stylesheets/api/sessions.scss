@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.login-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background: green;
+  opacity: 0.8;
+  color: white;
+  padding: 10px;
+}
+
+.login-nav-bar-left a {
+  // display: flex;
+  // flex-direction: row;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -10,6 +24,7 @@
   color: white;
   padding: 10px;
 }
+
 
 //Bickr Logo
 .logo {

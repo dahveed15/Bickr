@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default () => {
+export default ({currentUser}) => {
   return (
     <div>
-      I AM THE PROFILE PAGE
+      <p>Hello, {currentUser.username}! Welcome to Bickr!</p>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import AlbumShow from './album_show';
 import { fetchAlbum } from '../../actions/album_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(ownProps);
   return {
     album: state.albums[ownProps.match.params.albumId]
   };

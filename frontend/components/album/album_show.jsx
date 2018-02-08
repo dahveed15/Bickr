@@ -15,6 +15,13 @@ class AlbumShow extends React.Component {
   render() {
     const album = this.props.album;
     //the case if previous state is undefined
+
+    if (this.props.location.pathname === '/albums/new') {
+      return (
+        <div></div>
+      );
+    }
+
     if (!album) {
       return (
         <div>Loading...</div>
