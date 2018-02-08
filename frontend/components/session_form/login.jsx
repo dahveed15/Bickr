@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
   //we want to have a callback function that will redirect us
   handleSubmit(e) {
     e.preventDefault();
-    this.props.login(this.state).then(() => this.props.history.push('/'));
+    this.props.login(this.state).then(() => this.props.history.push('/profile'));
   }
 
   demoLogin(e) {
