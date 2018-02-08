@@ -42,14 +42,15 @@ class PhotoFormModal extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.openModal}>Add Photo To Album</button>
+        <div className="add-photo-button">
+          <button onClick={this.openModal}>Add Photo To Album</button>
+        </div>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           style={customStyles}
           contentLabel="Photo Upload Modal"
-
         >
           <PhotoForm
             albumId={this.props.albumId}
