@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PhotoIndex from './photo_index';
-import { fetchPhotos, deletePhoto } from '../../actions/photo_actions';
+import { fetchPhotos, deletePhoto, createPhoto } from '../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
   //give me an array of the current user's photos
@@ -14,7 +14,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchPhotos: (albumId) => dispatch(fetchPhotos(albumId)),
-    deletePhoto: (id) => dispatch(deletePhoto(id))
+    deletePhoto: (id) => dispatch(deletePhoto(id)),
+    createPhoto: (albumId, photo) => dispatch(createPhoto(albumId, photo))
   };
 };
 

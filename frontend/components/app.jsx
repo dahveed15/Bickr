@@ -40,7 +40,6 @@ const App = () => {
           <ProtectedRoute exact path="/albums/:albumId" component={PhotoIndexContainer} />
           <ProtectedRoute exact path="/albums/:albumId/edit" component={AlbumFormContainer} />
           <ProtectedRoute exact path="/photos/:photoId" component={PhotoShowContainer} />
-          <ProtectedRoute exact path="/testingPhoto" component={PhotoForm} />
           <Redirect to='/' />
         </Switch>
       </div>

@@ -1,5 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PhotoFormModal from './photo_form_modal';
+
+//pass props to PhotoFormModal
+//PhotoFormModal
+//pass props to PhotoForm
+  //in the Modal tag, pass in the PhotoForm component
+
+//render PhotoFormModal component in here
+
+//Add a photo button will open the PhotoFormModal when clicked
 
 class PhotoIndex extends React.Component {
 
@@ -14,6 +24,9 @@ class PhotoIndex extends React.Component {
 
   render() {
     // <Link to="/photos/new">Create a New Photo</Link>
+    // <PhotoFormModal
+    //   albumId={this.props.albumId}
+    //   createPhoto={this.props.createPhoto}/>
     return (
       <div>
         <h1 className="photo-list-title">My Photos</h1>
@@ -28,6 +41,9 @@ class PhotoIndex extends React.Component {
             </div>)}
         </ul>
 
+        <PhotoFormModal
+          albumId={this.props.albumId}
+          createPhoto={this.props.createPhoto} />
       </div>
     );
   }
