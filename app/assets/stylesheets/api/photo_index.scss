@@ -4,18 +4,19 @@
   margin: 30px 0;
 }
 
-//keeps the image size as is and fills the other area with space
-//this will allow all images to take the same specified space
-//regardless of the image size without stretching
+//this looks like it's scaling every image to that width
 .photo-list a img {
-  width: 400px;
-  height: 400px;
-  object-fit: scale-down;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+  width: 35%;
 }
 
 //add spacing between delete button and other photos
 .photo-delete-button {
-  margin-bottom: 20px;
+  margin-top: 40px;
+  // border: 2px solid green;
 }
 
 .photo-delete-button button {

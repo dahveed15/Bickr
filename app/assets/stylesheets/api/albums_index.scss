@@ -11,31 +11,37 @@
 
 .album-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   // border: 2px solid green;
+}
+
+
+.album-titles a {
+  margin-right: 20px;
+  font-size: 20px;
 }
 
 //albums to go to the album show page
 .album-list a {
   text-decoration: none;
   border: 2px solid gray;
-  padding: 0 5px;
+  padding: 5px 7px;
   color: black;
   font-weight: bold;
   border-radius: 3px;
 }
 
-.album-number {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #0033cc;
-}
+// .album-number {
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+//   font-size: 20px;
+//   color: #0033cc;
+// }
 
 .album-delete-button {
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 .album-delete-button button {
@@ -44,12 +50,13 @@
   color: white;
   padding: 7px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .create-new-album-link {
-  margin-top: 50px;
+  margin-top: 80px;
+  text-align: center;
 }
 
 //a refers to Link that was imported from react-router-dom
@@ -57,9 +64,9 @@
   text-decoration: none;
   // border: 2px solid green;
   background: gray;
-  padding: 7px;
-  border-radius: 3px;
-  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
   font-weight: bold;
   color: white;
 }

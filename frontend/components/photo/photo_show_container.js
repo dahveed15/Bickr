@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PhotoShow from './photo_show';
-import { fetchPhoto } from '../../actions/photo_actions';
+import { fetchPhoto, deletePhoto } from '../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchPhoto: id => dispatch(fetchPhoto(id))
+    fetchPhoto: id => dispatch(fetchPhoto(id)),
+    deletePhoto: (id) => dispatch(deletePhoto(id))
   };
 };
 

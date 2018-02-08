@@ -31,12 +31,8 @@ class PhotoIndex extends React.Component {
           {this.props.photos.map((photo, idx) =>
             <div key={idx}>
               <Link to={`/photos/${photo.id}`}><img src={photo.img_url} /></Link>
-              <div className="photo-delete-button">
-                <button onClick={() => this.props.deletePhoto(photo.id)}>Delete Photo</button>
-              </div>
             </div>)}
         </ul>
-
         <PhotoFormModal
           albumId={this.props.albumId}
           createPhoto={this.props.createPhoto} />

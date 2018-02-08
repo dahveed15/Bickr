@@ -31,6 +31,9 @@ class PhotoShow extends React.Component {
         <div className="photo-show-pic">
           <img src={this.props.photo.img_url} />
         </div>
+        <div className="photo-delete-button">
+          <button onClick={() => this.props.deletePhoto(photo.id)}>Delete Photo</button>
+        </div>
       </div>
     );
   }
