@@ -21,18 +21,13 @@ class PhotoShow extends React.Component {
       );
     }
 
-    // <div className="photo-show-links">
-    //   <Link to={`/photos/${photo.id}/edit`}>Update Photo</Link>
-    //   <Link to="/photos">Back to Photos</Link>
-    // </div>
-
     return (
       <div>
         <div className="photo-show-pic">
           <img src={this.props.photo.img_url} />
         </div>
         <div className="photo-delete-button">
-          <button onClick={() => this.props.deletePhoto(photo.id)}>Delete Photo</button>
+          <button onClick={() => this.props.deletePhoto(photo.id).then(() => this.props.history.push('/albums'))}>Delete Photo</button>
         </div>
       </div>
     );

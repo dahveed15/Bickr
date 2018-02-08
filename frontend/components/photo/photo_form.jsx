@@ -30,6 +30,7 @@ class PhotoForm extends React.Component {
         this.setState({
           uploadedFileCloudinaryUrl: response.body.secure_url
         });
+        //add the photo to the album
         this.props.createPhoto(this.props.albumId, this.state.uploadedFileCloudinaryUrl);
       }
     });
