@@ -35,7 +35,7 @@
 }
 
 //albums, logout
-.login-nav-bar-right a, .login-nav-bar-right button {
+.login-nav-bar-right a {
   margin-top: 20px;
   margin-right: 40px;
 }
@@ -44,10 +44,15 @@
   text-decoration: none;
   font-size: 25px;
   color: white;
+  position: relative;
+  top: 13px;
 }
 
 .login-nav-bar-right button {
-  // font-size: 20px;
+  font-size: 18px;
+  position: relative;
+  top: 11px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
