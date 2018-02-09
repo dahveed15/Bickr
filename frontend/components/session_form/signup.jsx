@@ -75,9 +75,10 @@ class SignUpForm extends React.Component {
                 className='password-input'
                 placeholder="Password" />
 
-            <button className="signup-button" onClick={this.handleSubmit}>Sign Up</button>
-
-            <button className="demo-button" onClick={this.demoLogin}>Try it out!</button>
+              <div className="signup-buttons">
+                <button className="signup-button" onClick={this.handleSubmit}>Sign Up</button>
+                <button className="demo-button" onClick={this.demoLogin}>Try it out!</button>
+              </div>
           </form>
         </div>
       </div>

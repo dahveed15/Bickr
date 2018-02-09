@@ -148,7 +148,7 @@
 .login-form {
 
   width: 360px;
-  height: 450px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   padding: 0px 10px;
@@ -170,16 +170,21 @@
   cursor: pointer;
 }
 
-.login-form button {
-  margin-bottom: 35px;
-  width: 100px;
-  height: 50px;
-  margin-left: 127px;
-  background-color: gray;
+.login-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.demo-button {
+  margin-top: 40px;
+}
+
+.login-button, .demo-button, .signup-button {
+  padding: 20px;
+  background: gray;
   color: white;
   border-radius: 5px;
 }
-
 
 .login-title {
   display: flex;
@@ -217,7 +222,7 @@
 .signup-form {
   // border: 2px solid blue;
   width: 360px;
-  height: 450px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   padding: 0px 10px;
@@ -235,14 +240,16 @@
 .signup-button {
   margin-top: 40px;
 }
-.signup-form button {
-  margin-bottom: 35px;
-  width: 100px;
-  height: 50px;
-  margin-left: 127px;
-  background-color: gray;
-  color: white;
-  border-radius: 5px;
+
+
+.signup-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.signup-buttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 .signup-button:hover {
