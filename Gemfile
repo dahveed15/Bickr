@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
-gem 'pry-rails'
 gem 'jquery-rails'
 
 # Use Capistrano for deployment
@@ -38,6 +37,7 @@ gem 'jquery-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
   # Adds support for Capybara system testing and selenium driver
   gem 'annotate'
   gem 'capybara', '~> 2.13'
