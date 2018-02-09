@@ -59,7 +59,7 @@ const App = () => {
 ![](https://i.imgur.com/c1d3gp6.png)
 ![](https://i.imgur.com/9OxYHtL.png)
 
-In addition to viewing a list of photos in an album, users have the ability to add as many photos as they desire to any album that they desire. This is accomplised by passing the albumId and createPhoto prop through my modal component to the upload code. The createdPhoto action will dispatch once the photo uploads, and the photo will be added to the list of photos.
+In addition to viewing a list of photos in an album, users have the ability to add as many photos as they desire to any album that they desire. This is accomplished by passing the albumId and createPhoto prop through my modal component to the upload code. The createdPhoto action will dispatch once the photo uploads, and the photo will be added to the list of photos.
 
 ```js
 {this.props.photos.map((photo, idx) =>
