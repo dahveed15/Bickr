@@ -14,15 +14,17 @@ export default ({currentUser}) => {
   return (
     <div>
       <p className="welcome">Hello, {currentUser.username}! Welcome to Bickr!</p>
-      <ul>
-        {images.map((el, idx) =>
-          <div key={idx}>
-            <div>
-              <p>Bickr Editorial <span>Official</span></p>
+      <ul className="align-home-page-images">
+        <div className="outer-home-page-div">
+          {images.map((el, idx) =>
+            <div className="one-home-page-image" key={idx}>
+              <div className="block">
+                <p>Bickr Editorial <span>Official</span></p>
+              </div>
+              <img src={el} />
             </div>
-            <img src={el} />
-          </div>
-        )}
+          )}
+        </div>
       </ul>
     </div>
   );

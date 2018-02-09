@@ -4,3 +4,33 @@
   font-weight: bold;
   margin: 40px 0;
 }
+
+.align-home-page-images {
+  // border: 2px solid green;
+  display: block;
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  // padding-left: 15px;
+}
+
+.block {
+  // border: 2px solid blue;
+}
+
+.one-hoame-page-image {
+  // border: 2px solid orange;
+  width: 330px;
+  height: 330px;
+  // margin-bottom: 20px;
+}
+
+.one-home-page-image img {
+  width: inherit;
+  height: inherit;
+}
+
+.outer-home-page-div {
+  display: flex;
+  flex-wrap: wrap;
+}
