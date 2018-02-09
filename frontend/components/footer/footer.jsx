@@ -4,16 +4,9 @@ export default () => {
 
   return (
     <div className="footer-element">
-      <span>About</span>
-      <span>Jobs</span>
-      <span>Blog</span>
-      <span>Mobile</span>
-      <span>Developers</span>
-      <span>Guidelines</span>
-      <span>Privacy</span>
-      <span>Terms</span>
-      <span>Help forum</span>
-      <span>English</span>
+      <span><a href="https://github.com/dahveed15">Github</a></span>
+      <span><a href="https://www.linkedin.com/in/david-harris-8ab454151/">LinkedIn</a></span>
+      <span>Contact</span>
     </div>
   );
 
