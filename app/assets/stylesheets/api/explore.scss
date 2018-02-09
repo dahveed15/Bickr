@@ -1,0 +1,18 @@
+.explore-title {
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  margin: 60px 0;
+}
+
+ul.explore-photos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // center things vertically
+}
+
+.explore-photos-list img {
+    margin: 0 50px; // Separate each picture a bit to the left and right
+    max-width: 500px;
+    max-height: 300px; // don't let pictures get wider than 300px
+}
