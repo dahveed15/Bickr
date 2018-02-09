@@ -13,7 +13,7 @@ export default ({currentUser}) => {
 
   return (
     <div>
-      <p className="welcome">Hello, {currentUser.username}! Welcome to Bickr!</p>
+      <p className="welcome">Hello, {currentUser.username}! Welcome to bickr!</p>
       <ul className="align-home-page-images">
         <div className="outer-home-page-div">
           {images.map((el, idx) =>
