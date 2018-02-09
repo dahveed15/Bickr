@@ -18,6 +18,7 @@
   font-size: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
+  font-family: 'Concert One', cursive;
 }
 
 .album-form {
@@ -30,6 +31,7 @@
 .album-form label {
   margin-bottom: 60px;
   font-size: 20px;
+  font-family: 'Amiri', serif;
 }
 
 .album-form label input {
@@ -45,12 +47,13 @@
 
 .album-form input[type=submit] {
   background: gray;
-  width: 110px;
+  width: 115px;
   height: 60px;
   color: white;
-  font-size: 13px;
+  font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Inconsolata', monospace;
 }
 
 .album-form a {
@@ -62,4 +65,5 @@
   padding: 13px 0 0 0;
   text-align: center;
   border-radius: 5px;
+  font-family: 'Inconsolata', monospace;
 }

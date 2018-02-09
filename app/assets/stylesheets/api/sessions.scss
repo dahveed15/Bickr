@@ -16,23 +16,15 @@
   margin-right: 40px;
 }
 
-.you {
+.you, .explore, .create {
   text-decoration: none;
   font-size: 25px;
   color: white;
 }
 
-.explore {
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-}
-
-.create {
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-}
+// .you:hover, .explore:hover, .create:hover {
+//   color: black;
+// }
 
 //albums, logout
 .login-nav-bar-right a {
