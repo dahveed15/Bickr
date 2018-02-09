@@ -7,7 +7,7 @@
 
 .align-home-page-images {
   display: block;
-  width: 1080px;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -16,11 +16,26 @@
   width: 40%;
   display: inline-block;
   margin-right: 35px;
+  margin-bottom: 15px;
+}
+
+.card-title p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-title p span {
+  border: 2px solid gray;
+  padding: 2px;
+  border-radius: 5px;
 }
 
 .card img {
   height: inherit;
   width: 100%;
+  margin-top: 8px;
 }
 
 .outer-home-page-div {

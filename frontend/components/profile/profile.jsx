@@ -18,7 +18,7 @@ export default ({currentUser}) => {
         <div className="outer-home-page-div">
           {images.map((el, idx) =>
             <div className="card" key={idx}>
-              <div>
+              <div className="card-title">
                 <p>Bickr Editorial <span>Official</span></p>
               </div>
               <img src={el} />
