@@ -17,8 +17,8 @@ export default ({currentUser}) => {
       <ul className="align-home-page-images">
         <div className="outer-home-page-div">
           {images.map((el, idx) =>
-            <div className="one-home-page-image" key={idx}>
-              <div className="block">
+            <div className="card" key={idx}>
+              <div>
                 <p>Bickr Editorial <span>Official</span></p>
               </div>
               <img src={el} />

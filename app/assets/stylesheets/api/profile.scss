@@ -14,23 +14,28 @@
   // padding-left: 15px;
 }
 
-.block {
+.card {
   // border: 2px solid blue;
 }
 
-.one-hoame-page-image {
+.card {
   // border: 2px solid orange;
-  width: 330px;
-  height: 330px;
+  width: 40%;
+  display: inline-block;
+  // height: 330px;
   // margin-bottom: 20px;
 }
 
-.one-home-page-image img {
+.card img {
   width: inherit;
   height: inherit;
+  width: 100%;
+  // margin-right: 20px;
+
 }
 
 .outer-home-page-div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
