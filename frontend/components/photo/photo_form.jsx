@@ -31,7 +31,9 @@ class PhotoForm extends React.Component {
           uploadedFileCloudinaryUrl: response.body.secure_url
         });
         //add the photo to the album
-        this.props.createPhoto(this.props.albumId, this.state.uploadedFileCloudinaryUrl);
+        //I needed to pass in ownProps so I could use it here
+        //history didn't like me routing to the same link, so I routed somewhere else and brought it back
+        this.props.createPhoto(this.props.albumId, this.state.uploadedFileCloudinaryUrl).then(() => this.props.useOwnProps.history.push(`/albums/`)).then(() => this.props.useOwnProps.history.push(`/albums/${this.props.albumId}`));
       }
     });
   }

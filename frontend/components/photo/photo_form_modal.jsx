@@ -54,7 +54,8 @@ class PhotoFormModal extends React.Component {
         >
           <PhotoForm
             albumId={this.props.albumId}
-            createPhoto={this.props.createPhoto} />
+            createPhoto={this.props.createPhoto}
+            useOwnProps={this.props.useOwnProps} />
         </Modal>
       </div>
     );

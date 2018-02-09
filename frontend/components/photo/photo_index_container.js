@@ -4,10 +4,10 @@ import { fetchPhotos, deletePhoto, createPhoto } from '../../actions/photo_actio
 
 const mapStateToProps = (state, ownProps) => {
   //give me an array of the current user's photos
-
   return {
     photos: Object.values(state.photos),
-    albumId: ownProps.match.params.albumId ? ownProps.match.params.albumId : null
+    albumId: ownProps.match.params.albumId ? ownProps.match.params.albumId : null,
+    useOwnProps: ownProps
   };
 };
 

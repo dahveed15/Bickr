@@ -12,10 +12,10 @@ import Masonry from 'react-masonry-component';
 
 //Add a photo button will open the PhotoFormModal when clicked
 
-const masonryOptions = {
-    transitionDuration: 0,
-    fitWidth: true
-};
+// const masonryOptions = {
+//     transitionDuration: 0,
+//     fitWidth: true
+// };
 
 class PhotoIndex extends React.Component {
 
@@ -52,7 +52,8 @@ class PhotoIndex extends React.Component {
         </ul>
         <PhotoFormModal
           albumId={this.props.albumId}
-          createPhoto={this.props.createPhoto} />
+          createPhoto={this.props.createPhoto}
+          useOwnProps={this.props.useOwnProps} />
       </div>
     );
   }
