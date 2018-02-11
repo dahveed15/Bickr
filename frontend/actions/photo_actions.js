@@ -3,6 +3,7 @@ import * as PhotoApiUtil from '../util/photo_api_util';
 export const RECEIVE_ALL_PHOTOS = "RECEIVE_ALL_PHOTOS";
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const REMOVE_PHOTO = "REMOVE_PHOTO";
+export const RECEIVE_ALL_EXPLORE_PHOTOS = 'RECEIVE_ALL_EXPLORE_PHOTOS';
 
 const receiveAllPhotos = photos => {
   return {
@@ -22,6 +23,13 @@ const removePhoto = photoId => {
   return {
     type: REMOVE_PHOTO,
     photoId
+  };
+};
+
+const receiveAllExplorePhotos = explorePhotos => {
+  return {
+    type: RECEIVE_ALL_EXPLORE_PHOTOS,
+    explorePhotos
   };
 };
 
@@ -48,4 +56,8 @@ export const updatePhoto = (photo) => dispatch => {
 export const deletePhoto = (photoId) => dispatch => {
   return PhotoApiUtil.deletePhoto(photoId)
   .then(() => dispatch(removePhoto(photoId)));
+};
+
+export const explorePhotos = () => dispatch => {
+  return PhotoApiUtil.explorePhotos().then((serverExplorePhotos) => dispatch(receiveAllExplorePhotos(serverExplorePhotos)));
 };

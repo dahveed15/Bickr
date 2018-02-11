@@ -12,7 +12,7 @@ import AlbumFormContainer from './album/album_form_container';
 import PhotoIndexContainer from './photo/photo_index_container';
 import PhotoShowContainer from './photo/photo_show_container';
 import Profile from './profile/profile_container';
-import Explore from './explore/explore';
+import ExploreContainer from './explore/explore_container';
 
 //route allows us to add custom routes to send our components to
 //I want Bickr to be rendered on every web page, so I won't route it
@@ -42,7 +42,7 @@ const App = () => {
           <ProtectedRoute exact path="/albums/:albumId/edit" component={AlbumFormContainer} />
           <ProtectedRoute exact path="/photos/:photoId" component={PhotoShowContainer} />
           <ProtectedRoute exact path="/profile" component={Profile} />
-          <ProtectedRoute exact path="/explore" component={Explore} />
+          <ProtectedRoute exact path="/explore" component={ExploreContainer} />
           <Redirect to='/profile' />
         </Switch>
       </div>
