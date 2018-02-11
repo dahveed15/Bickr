@@ -16,29 +16,6 @@ ul.photo-list {
     max-width: 300px; // don't let pictures get wider than 300px
 }
 
-.photo-show-pic img {
-  margin-top: 70px;
-  margin-left: 254px;
-  width: 50%;
-  padding: 10px;
-}
-
-//add spacing between delete button and other photos
-.photo-delete-button {
-  margin-top: 40px;
-  margin-left: 470px;
-  // border: 2px solid green;
-}
-
-.photo-delete-button button {
-  background-color: gray;
-  color: white;
-  border-radius: 5px;
-  padding: 15px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
 .add-photo-button {
   display: flex;
   justify-content: center;

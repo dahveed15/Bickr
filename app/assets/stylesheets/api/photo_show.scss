@@ -1,0 +1,51 @@
+.uploader {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.photo-show-pic {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-show-pic img {
+  max-height: 700px;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.photo-show-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.photo-show-backTo a {
+  margin-right: 120px;
+  text-decoration: none;
+  background-color: gray;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.photo-show-backTo {
+  margin-bottom: 20px;
+}
+
+.photo-delete-button button {
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 120px;
+  margin-left: 120px;
+}
+
+.photo-delete-button {
+  margin-bottom: 20px;
+}

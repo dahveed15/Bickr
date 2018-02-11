@@ -22,7 +22,7 @@ class PhotoShow extends React.Component {
 
   backTo() {
     return (
-      <div className="photo-delete-button">
+      <div className="photo-show-backTo">
         <Link to="/explore">Back to Explore</Link>
         <Link to="/albums">Back to Albums</Link>
       </div>
@@ -48,12 +48,14 @@ class PhotoShow extends React.Component {
 
     return (
       <div>
-        <p>Uploaded By: {this.props.photo.username}</p>
+        <p className="uploader">Uploaded By: {this.props.photo.username}</p>
         <div className="photo-show-pic">
           <img src={this.props.photo.img_url} />
         </div>
-        {deleteButton}
-        {this.backTo()}
+        <div className="photo-show-options">
+          {deleteButton}
+          {this.backTo()}
+        </div>
       </div>
     );
   }
