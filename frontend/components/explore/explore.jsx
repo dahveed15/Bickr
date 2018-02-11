@@ -13,18 +13,19 @@ class ExplorePhotoIndex extends React.Component {
 
   render() {
     if (this.props.explorePhotoState.length === 0) {
-      console.log('anything');
       return (
         <div>Loading...</div>
       );
     }
-    console.log(this.props.explorePhotoState);
     return (
       <div>
-        {this.props.explorePhotoState.map((photo, idx) =>
-          <div key={idx}>
-            <Link to={`/photos/${photo.id}`}><img src={photo.img_url} /></Link>
-          </div>)}
+        <p className="explore-title">Explore</p>
+        <ul className="photo-list">
+          {this.props.explorePhotoState.map((photo, idx) =>
+            <div key={idx}>
+              <Link to={`/photos/${photo.id}`}><img src={photo.img_url} /></Link>
+            </div>)}
+        </ul>
       </div>
     );
   }
