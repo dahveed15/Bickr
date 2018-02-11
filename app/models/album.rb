@@ -20,7 +20,8 @@ class Album < ApplicationRecord
   has_many :photos,
   primary_key: :id,
   foreign_key: :album_id,
-  class_name: :Photo
+  class_name: :Photo,
+  dependent: :destroy
 
   # has_many :comments, as: :imageable_type
 end
