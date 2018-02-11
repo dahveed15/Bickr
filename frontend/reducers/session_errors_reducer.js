@@ -7,7 +7,9 @@ export default (state = [], action) => {
 
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
-      return action.errors;
+      if(action.errors) {        
+        return action.errors;
+      }
     default:
       return state;
   }

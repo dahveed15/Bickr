@@ -4,7 +4,8 @@ import { fetchPhoto, deletePhoto } from '../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    photo: state.photos[ownProps.match.params.photoId]
+    photo: state.photos[ownProps.match.params.photoId],
+    currentUser: state.session.currentUser.username
   };
 };
 
