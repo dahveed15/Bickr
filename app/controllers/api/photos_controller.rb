@@ -9,12 +9,14 @@ class Api::PhotosController < ApplicationController
 
   def show
     #only be able to see an album photo by a current user
-    @photo = current_user.album_photos.find_by(id: params[:id])
+    @photo = Photo.find_by(id: params[:id])
+    @user = User.find_by(id: @photo.user_id)
   end
 
   def create
     @photo = Photo.new(photo_params)
     @photo.user_id = current_user.id
+    @user = User.find_by(id: @photo.user_id)
 
     #fixes multiple users being able to have the same album id
     @photo.album_id = params[:album_id] if current_user.albums.find_by(id: params[:album_id])
@@ -37,6 +39,7 @@ class Api::PhotosController < ApplicationController
 
   def destroy
     @photo = current_user.album_photos.find_by(id: params[:id])
+    @user = User.find_by(id: @photo.user_id)
     @photo.destroy
 
     render :show

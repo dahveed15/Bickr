@@ -23,6 +23,7 @@ class PhotoShow extends React.Component {
 
     return (
       <div>
+        <p>Uploaded By: {this.props.photo.username}</p>
         <div className="photo-show-pic">
           <img src={this.props.photo.img_url} />
         </div>
