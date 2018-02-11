@@ -35,3 +35,10 @@ export const deletePhoto = (id) => {
     url: `api/photos/${id}`
   });
 };
+
+export const explorePhotos = () => {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/explores'
+  });
+};
