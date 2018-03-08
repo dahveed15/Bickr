@@ -24,5 +24,8 @@ class Photo < ApplicationRecord
   class_name: :User
 
 
-  # has_many :comments, as: :imageable_type
+  has_many :comments,
+  primary_key: :id,
+  foreign_key: :photo_id,
+  class_name: :Comment
 end
