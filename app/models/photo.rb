@@ -23,9 +23,10 @@ class Photo < ApplicationRecord
   foreign_key: :user_id,
   class_name: :User
 
-
+  #destroy comments if photo is destroyed
   has_many :comments,
   primary_key: :id,
   foreign_key: :photo_id,
-  class_name: :Comment
+  class_name: :Comment,
+  dependent: :destroy
 end

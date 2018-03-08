@@ -17,11 +17,11 @@ class Album < ApplicationRecord
   foreign_key: :user_id,
   class_name: :User
 
+  #destroy photos if album is destroyed
   has_many :photos,
   primary_key: :id,
   foreign_key: :album_id,
   class_name: :Photo,
   dependent: :destroy
 
-  # has_many :comments, as: :imageable_type
 end
