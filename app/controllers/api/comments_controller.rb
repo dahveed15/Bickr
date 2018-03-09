@@ -3,10 +3,6 @@ class Api::CommentsController < ApplicationController
   before_action :require_logged_in
 
 
-  def show
-
-  end
-
   def create
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
@@ -19,18 +15,14 @@ class Api::CommentsController < ApplicationController
 
     @user = User.find_by(id: @comment.user_id)
 
-    if @comment.save
-      render :show
-    else
+    unless @comment.save
       render json: @comment.errors.full_messages, status: 422
     end
   end
 
   def update
     @comment = current_user.comments.find_by(id: params[:id])
-    if @comment.update_attributes(comment_params)
-      render :show
-    else
+    unless @comment.update_attributes(comment_params)
       render json: @comment.errors.full_messages, status: 422
     end
   end
@@ -39,7 +31,6 @@ class Api::CommentsController < ApplicationController
     @comment = current_user.comments.find_by(id: params[:id])
     @comment.destroy
 
-    render :show
   end
 
   private

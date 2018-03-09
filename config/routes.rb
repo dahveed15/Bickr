@@ -8,9 +8,10 @@ Rails.application.routes.draw do
     resources :albums, only: [:create, :show, :index, :update, :destroy] do
       resources :photos, only: [:index, :create]
     end
-    resources :photos, only: [:show, :update, :destroy]
+    resources :photos, only: [:show, :update, :destroy] do
+      resources :comments, only: [:create, :update, :destroy]
+    end
     resources :explores, only: [:index]
-    resources :comments, only: [:show, :create, :update, :destroy]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
