@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
     resources :photos, only: [:show, :update, :destroy]
     resources :explores, only: [:index]
+    resources :comments, only: [:show, :create, :update, :destroy]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
