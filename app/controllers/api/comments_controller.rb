@@ -12,8 +12,9 @@ class Api::CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @photo = Photo.find_by(:id, params[:id])
 
-    #may need to fix this line
+
     @comment.photo_id = @photo.id
+    @comment.comment_user = current_user.username
 
     @user = User.find_by(id: @comment.user_id)
 

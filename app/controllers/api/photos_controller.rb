@@ -12,6 +12,11 @@ class Api::PhotosController < ApplicationController
     @photo = Photo.find_by(id: params[:id])
     @user = User.find_by(id: @photo.user_id)
     @comments = @photo.comments
+    # @user_names = {}
+    # @comments.each do |comment|
+    #   username = User.find_by(id: comment.user_id).username
+    #   @user_names[comment.id] = username
+    # end
   end
 
   def create
