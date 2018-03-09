@@ -11,6 +11,7 @@ class Api::PhotosController < ApplicationController
     #only be able to see an album photo by a current user
     @photo = Photo.find_by(id: params[:id])
     @user = User.find_by(id: @photo.user_id)
+    @comments = @photo.comments
   end
 
   def create
