@@ -4,6 +4,7 @@ import errorsReducer from './errors_reducer';
 import sessionReducer from './session_reducer';
 import AlbumsReducer from './album_reducer';
 import PhotosReducer from './photo_reducer';
+import CommentsReducer from './comment_reducer';
 import ExplorePhotosReducer from './explore_photo_reducer';
 
 const rootReducer = combineReducers({
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   session: sessionReducer,
   albums: AlbumsReducer,
   photos: PhotosReducer,
+  comments: CommentsReducer,
   explorePhotos: ExplorePhotosReducer
 });
 
