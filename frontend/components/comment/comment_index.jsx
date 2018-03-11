@@ -13,6 +13,9 @@ class CommentIndex extends React.Component {
     return (
       <div>
         <h1>Comments</h1>
+        <textarea placeholder="Start typing...">
+          
+        </textarea>
         <ul>
           {
             this.props.comments.map((comment, idx) =>
