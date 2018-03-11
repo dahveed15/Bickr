@@ -5,3 +5,17 @@ export const createComment = (photoId, body, commentUser) => {
     data: {comment: {body: body, comment_user: commentUser}}
   });
 };
+
+export const updateComment = (comment) => {
+  return $.ajax({
+    method: 'PATCH',
+    url: `api/comments/${comment.id}`
+  });
+};
+
+export const deleteComment = (id) => {
+  return $.ajax({
+    method: 'DELETE',
+    url: `api/comments/${id}`
+  });
+};

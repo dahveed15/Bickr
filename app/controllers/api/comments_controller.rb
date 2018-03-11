@@ -4,7 +4,7 @@ class Api::CommentsController < ApplicationController
 
 
   def create
-    
+
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
     @photo = Photo.find_by(id: params[:photo_id])
@@ -22,14 +22,14 @@ class Api::CommentsController < ApplicationController
   end
 
   def update
-    @comment = current_user.comments.find_by(id: params[:photo_id])
+    @comment = current_user.comments.find_by(id: params[:id])
     unless @comment.update_attributes(comment_params)
       render json: @comment.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    @comment = current_user.comments.find_by(id: params[:photo_id])
+    @comment = current_user.comments.find_by(id: params[:id])
     @comment.destroy
 
   end
@@ -37,7 +37,7 @@ class Api::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body)
+    params.require(:comment).permit(:body, :comment_user)
   end
 
 end
