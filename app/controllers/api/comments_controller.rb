@@ -2,6 +2,10 @@ class Api::CommentsController < ApplicationController
 
   before_action :require_logged_in
 
+  def index
+    #give me all of the comments under a specific photo
+    @comments = Photo.find_by(id: params[:photo_id]).comments
+  end
 
   def create
 
