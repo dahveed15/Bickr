@@ -25,6 +25,11 @@ const removeComment = commentId => {
   };
 };
 
+export const fetchComments = (photoId) => dispatch => {
+  return CommentApiUtil.fetchComments(photoId)
+  .then(serverComments => dispatch(receiveAllComments(serverComments)));
+};
+
 export const createComment = (photoId, body, commentUser) => dispatch => {
   return CommentApiUtil.createComment(photoId, body, commentUser)
   .then(createdComment => dispatch(receiveComment(createdComment)));

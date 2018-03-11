@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { fetchPhoto } from './actions/photo_actions';
-import { createComment, deleteComment, updateComment } from './actions/comment_actions';
+import { fetchComments, createComment, deleteComment, updateComment } from './actions/comment_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -21,5 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.createComment = createComment;
   window.deleteComment = deleteComment;
   window.updateComment = updateComment;
+  window.fetchComments = fetchComments;
   ReactDOM.render(<Root store={store} />, root);
 });
