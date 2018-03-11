@@ -11,6 +11,7 @@ import AlbumShowContainer from './album/album_show_container';
 import AlbumFormContainer from './album/album_form_container';
 import PhotoIndexContainer from './photo/photo_index_container';
 import PhotoShowContainer from './photo/photo_show_container';
+import CommentIndexContainer from './comment/comment_index_container';
 import Profile from './profile/profile_container';
 import ExploreContainer from './explore/explore_container';
 
@@ -32,6 +33,7 @@ const App = () => {
       <Route path='/' component={NavBarContainer} />
       <div className="fix-footer">
         <ProtectedRoute exact path="/albums/:albumId" component={AlbumShowContainer} />
+        <ProtectedRoute exact path="/photos/:photoId" component={PhotoShowContainer} />
         <Switch>
           <AuthRoute exact path="/signup" component={SignUpFormContainer} />
           <AuthRoute exact path="/login" component={LoginFormContainer} />
@@ -40,7 +42,7 @@ const App = () => {
           <ProtectedRoute exact path="/albums/new" component={AlbumFormContainer} />
           <ProtectedRoute exact path="/albums/:albumId" component={PhotoIndexContainer} />
           <ProtectedRoute exact path="/albums/:albumId/edit" component={AlbumFormContainer} />
-          <ProtectedRoute exact path="/photos/:photoId" component={PhotoShowContainer} />
+          <ProtectedRoute exact path="/photos/:photoId" component={CommentIndexContainer} />
           <ProtectedRoute exact path="/profile" component={Profile} />
           <ProtectedRoute exact path="/explore" component={ExploreContainer} />
           <Redirect to='/profile' />

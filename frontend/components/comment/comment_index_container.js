@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import CommentIndex from 'comment_index';
+import CommentIndex from './comment_index';
 import { fetchComments, createComment, updateComment, deleteComment } from '../../actions/comment_actions';
 
 const mapStateToProps = (state, ownProps) => {
