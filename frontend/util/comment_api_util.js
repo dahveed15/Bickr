@@ -9,7 +9,8 @@ export const createComment = (photoId, body, commentUser) => {
 export const updateComment = (comment) => {
   return $.ajax({
     method: 'PATCH',
-    url: `api/comments/${comment.id}`
+    url: `api/comments/${comment.id}`,
+    data: {comment}
   });
 };
 
