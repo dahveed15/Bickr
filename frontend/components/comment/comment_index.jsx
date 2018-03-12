@@ -13,10 +13,6 @@ class CommentIndex extends React.Component {
     this.props.fetchComments(this.props.photoId);
   }
 
-  // componentWillReceiveProps(newProps) {
-  //
-  // }
-
   //let the state of what I type in the comment field continually update
   handleCommentInput() {
     return(e) => {
@@ -31,8 +27,6 @@ class CommentIndex extends React.Component {
     .then(() => {
       this.setState({body: ''});
     });
-    // .then(this.props.history.push(`/explore`))
-    // .then;
   }
 
   render() {
