@@ -36,7 +36,6 @@ class CommentIndex extends React.Component {
     );
   }
   deleteMethod(comment){
-    console.log(comment);
     if (this.props.currentUser === comment.comment_user) {
       return this.deleteButton(comment);
     }
@@ -45,15 +44,19 @@ class CommentIndex extends React.Component {
   render() {
     return (
       <div>
-        <h1>Comments</h1>
+        <h1 className="comment-title">Comments</h1>
         <form onSubmit={this.addComment}>
           <textarea
+            rows="10"
+            cols="80"
             placeholder="Start typing..."
             autoFocus
             value={this.state.body}
             onChange={this.handleCommentInput()}
             ></textarea>
-          <input type="submit" value="Add Comment"/>
+          <div className="add-comment-button">
+            <input type="submit" value="Add Comment"/>
+          </div>
         </form>
         <ul>
           {

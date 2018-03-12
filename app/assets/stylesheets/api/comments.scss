@@ -1,3 +1,23 @@
 // Place all the styles related to the Api/Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.add-comment-button {
+  margin-left: 375px;
+}
+
+.add-comment-button input[type=submit] {
+  padding:5px 15px;
+    background: gray;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+}
