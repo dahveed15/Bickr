@@ -28,8 +28,8 @@ class CommentIndex extends React.Component {
 
     e.preventDefault();
     this.props.createComment(this.props.photoId, this.state.body, this.props.currentUser)
-    .then(body => { 
-      this.setState({body: body});
+    .then(() => {
+      this.setState({body: ''});
     });
     // .then(this.props.history.push(`/explore`))
     // .then;
