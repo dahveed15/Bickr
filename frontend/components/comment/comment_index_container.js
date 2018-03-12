@@ -13,7 +13,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchComments: (photoId) => dispatch(fetchComments(photoId)),
-    createComment: (photoId, body, commentUser) => dispatch(createComment(photoId, body, commentUser))
+    createComment: (photoId, body, commentUser) => dispatch(createComment(photoId, body, commentUser)),
+    deleteComment: (commentId) => dispatch(deleteComment(commentId))
   };
 };
 

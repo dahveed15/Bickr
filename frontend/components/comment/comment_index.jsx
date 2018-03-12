@@ -21,12 +21,25 @@ class CommentIndex extends React.Component {
   }
 
   addComment(e) {
-
     e.preventDefault();
     this.props.createComment(this.props.photoId, this.state.body, this.props.currentUser)
     .then(() => {
       this.setState({body: ''});
     });
+  }
+
+  deleteButton(comment) {
+    return (
+      <div>
+        <button onClick={() => this.props.deleteComment(comment.id)}>Delete Comment</button>
+      </div>
+    );
+  }
+  deleteMethod(comment){
+    console.log(comment);
+    if (this.props.currentUser === comment.comment_user) {
+      return this.deleteButton(comment);
+    }
   }
 
   render() {
@@ -48,6 +61,7 @@ class CommentIndex extends React.Component {
             <div key={idx}>
               <h2>{comment.comment_user}</h2>
               <p>{comment.body}</p>
+              {this.deleteMethod(comment)}
             </div>
           )}
         </ul>
