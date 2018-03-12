@@ -10,6 +10,7 @@ class Api::CommentsController < ApplicationController
   def create
 
     @comment = Comment.new(comment_params)
+
     @comment.user_id = current_user.id
     @photo = Photo.find_by(id: params[:photo_id])
 
@@ -23,6 +24,8 @@ class Api::CommentsController < ApplicationController
     unless @comment.save
       render json: @comment.errors.full_messages, status: 422
     end
+
+    p @comment
   end
 
   def update
