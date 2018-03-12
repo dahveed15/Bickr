@@ -31,7 +31,7 @@ class CommentIndex extends React.Component {
   deleteButton(comment) {
     return (
       <div>
-        <button onClick={() => this.props.deleteComment(comment.id)}>Delete Comment</button>
+        <button className="delete-comment-button" onClick={() => this.props.deleteComment(comment.id)}>Delete</button>
       </div>
     );
   }
@@ -65,7 +65,9 @@ class CommentIndex extends React.Component {
               <div className="comment-user">
                 <h2>{comment.comment_user}</h2>
               </div>
-              <p>{comment.body}</p>
+              <div className="comment-text">
+                <p>{comment.body}</p>
+              </div>
               {this.deleteMethod(comment)}
             </div>
           )}

@@ -34,3 +34,18 @@
 .comment-info {
   margin-bottom: 15px;
 }
+
+.delete-comment-button {
+  padding:5px 5px;
+    background: gray;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+}
+
+.comment-text {
+  margin-bottom: 10px;
+}
