@@ -61,8 +61,8 @@ class CommentIndex extends React.Component {
         </div>
         <form className="add-comment-form" onSubmit={this.addComment}>
           <textarea
-            rows="10"
-            cols="80"
+            rows="5"
+            cols="90"
             placeholder="Start typing..."
             autoFocus
             value={this.state.body}
