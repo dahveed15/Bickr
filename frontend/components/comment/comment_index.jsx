@@ -45,7 +45,21 @@ class CommentIndex extends React.Component {
     return (
       <div>
         <h1 className="comment-title">Comments</h1>
-        <form onSubmit={this.addComment}>
+        <div className="comment-items">
+          {
+            this.props.comments.map((comment, idx) =>
+            <div className="comment-info" key={idx}>
+              <div className="comment-user">
+                <h2>{comment.comment_user}</h2>
+              </div>
+              <div className="comment-text">
+                <p>{comment.body}</p>
+              </div>
+              {this.deleteMethod(comment)}
+            </div>
+          ).reverse()}
+        </div>
+        <form className="add-comment-form" onSubmit={this.addComment}>
           <textarea
             rows="10"
             cols="80"
@@ -58,20 +72,6 @@ class CommentIndex extends React.Component {
             <input type="submit" value="Add Comment"/>
           </div>
         </form>
-        <ul>
-          {
-            this.props.comments.map((comment, idx) =>
-            <div className="comment-info" key={idx}>
-              <div className="comment-user">
-                <h2>{comment.comment_user}</h2>
-              </div>
-              <div className="comment-text">
-                <p>{comment.body}</p>
-              </div>
-              {this.deleteMethod(comment)}
-            </div>
-          )}
-        </ul>
       </div>
     );
   }
