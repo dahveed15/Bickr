@@ -18,6 +18,24 @@ demo_user = User.create!(
   password: 'password'
 )
 
+alexina = User.create!(
+  username: 'alexina',
+  email: 'alexina@gmail.com',
+  password: 'password'
+)
+
+rewel = User.create!(
+  username: 'rewel',
+  email: 'rewel@gmail.com',
+  password: 'password'
+)
+
+james = User.create!(
+  username: 'james',
+  email: 'james@gmail.com',
+  password: 'password'
+)
+
 10.times do
   name = Faker::Name.unique.name
   name_arr = name.remove('.').split(' ')
@@ -196,13 +214,26 @@ discussion_photo_12 = Photo.create!(
 comment1 = Comment.create!(
   user_id: demo_user.id,
   photo_id: nature_photo_1.id,
-  body: 'testing heroku',
+  body: 'This is so cool!',
   comment_user: demo_user.username
 )
 
 comment2 = Comment.create!(
-  user_id: demo_user.id,
+  user_id: alexina.id,
   photo_id: nature_photo_1.id,
-  body: 'testing heroku again',
-  comment_user: demo_user.username
+  body: 'wow! nice!',
+  comment_user: alexina.username
+)
+
+comment3 = Comment.create!(
+  user_id: rewel.id,
+  photo_id: nature_photo_1.id,
+  body: 'amazing',
+  comment_user: rewel.username
+)
+comment4 = Comment.create!(
+  user_id: james.id,
+  photo_id: nature_photo_1.id,
+  body: 'love it bro',
+  comment_user: james.username
 )
