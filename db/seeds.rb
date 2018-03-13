@@ -192,3 +192,17 @@ discussion_photo_12 = Photo.create!(
   album_id: discussion_album.id,
   user_id: demo_user.id
 )
+
+comment1 = Comment.create!(
+  user_id: demo_user.id,
+  photo_id: nature_photo_1.id,
+  body: 'testing heroku',
+  comment_user: demo_user.username
+)
+
+comment2 = Comment.create!(
+  user_id: demo_user.id,
+  photo_id: nature_photo_1.id,
+  body: 'testing heroku again',
+  comment_user: demo_user.username
+)
