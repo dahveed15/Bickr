@@ -29,7 +29,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack -w",
-    "postinstall": "webpack"
+    "postinstall": "webpack -p"
   },
   "engines": {
     "npm": "3.10.10",
